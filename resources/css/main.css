@@ -21,6 +21,9 @@ RESPONSIVE #::RESP
 
 body {
     background-color: #fff;
+    font-family: "futura-pt","futura" , Futura, 'Trebuchet MS', 'Century Gothic', CenturyGothic, AppleGothic, 'Helvetica', 'Helvetica Neue', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 300;
 }
 
 .back-to-top {
@@ -40,13 +43,25 @@ body {
     background: #fff;
 }
 
+.top-bar .controls-list .control-basket .toggle-basket-preview {
+    background: transparent;
+}
+
 .wrapper-main .navbar {
     border: none;
     background: #fff;
 }
 
+.look_metaNav {
+
+}
+
 #mainNavbarCollapsable ul.mainmenu li a {
-    color: #474747;
+    color: #313131;
+}
+
+.navbar-brand .img-fluid {
+    width: 100%;
 }
 
 
