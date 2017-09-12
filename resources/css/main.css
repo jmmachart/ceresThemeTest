@@ -23,17 +23,37 @@ body {
     background-color: #fff;
 }
 
+.back-to-top {
+    border: 2px solid #f55e8d;
+    color: #f55e8d;
+    background: #fff;
+    border-radius: 100%;
+}
+
+.back-to-top i {
+    color: #f55e8d;
+}
+
 /* HEADER #::HEAD */
 
 .top-bar {
     background: #fff;
 }
 
+.wrapper-main .navbar {
+    border: none;
+    background: #fff;
+}
+
+#mainNavbarCollapsable ul.mainmenu li a {
+    color: #474747;
+}
+
 
 /* FOOTER #::FOOT */
 
 .footer .copyright small {
-    color: #D6D1CC;
+    color: #b8aea7;
 }
 
 /* RESPONSIVE #::RESP */
