@@ -7,13 +7,5 @@
   "keywords"              : ["plentymarkets", "plugins", "layout", "theme", "ceres"],
   "type"                  :"theme",
   "require"               : ["Ceres"],
-  "serviceProvider"       :"CeresZaliving\\Providers\\CeresZalivingServiceProvider",
-  "dataProviders"         :
-  [
-    {
-      "key"           :"CeresZaliving\\Containers\\CeresZalivingContainer",
-      "name"          :"ThemeContainer",
-      "description"   :"Container for theme changes"
-    }
-  ]
+  "serviceProvider"       :"CeresZaliving\\Providers\\CeresZalivingServiceProvider"
 }
