@@ -1,5 +1,43 @@
-/* MAIN STYLES CERESZALIVING */
+/*
+
+MAIN STYLES CERESZALIVING
+
+-- GOTO --
+
+GLOBAL #::GLOB
+HEADER #::HEAD
+FOOTER #::FOOT
+RESPONSIVE #::RESP
+
+-- ./GOTO --
+
+*/
+
+
+
+
+
+/* GLOBAL #::GLOB */
 
 body {
-    background-color: #808080;
+    background-color: #fff;
+}
+
+/* HEADER #::HEAD */
+
+.top-bar {
+    background: #fff;
+}
+
+
+/* FOOTER #::FOOT */
+
+.footer .copyright small {
+    color: #D6D1CC;
+}
+
+/* RESPONSIVE #::RESP */
+
+@media screen and (max-width: 768px) {
+
 }
