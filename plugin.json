@@ -11,7 +11,7 @@
   "dataProviders"         :
   [
     {
-      "key"           :"Theme\\Containers\\ThemeContainer",
+      "key"           :"CeresZaliving\\Containers\\CeresZalivingContainer",
       "name"          :"ThemeContainer",
       "description"   :"Container for theme changes"
     }
