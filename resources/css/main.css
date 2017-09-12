@@ -75,6 +75,8 @@ a:focus {
 
 .top-bar {
     background: #fff;
+    color: #454545;
+    font-size: 12px;
 }
 
 .top-bar .controls-list .control-basket .toggle-basket-preview {
