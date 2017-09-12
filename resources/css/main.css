@@ -5,8 +5,13 @@ MAIN STYLES CERESZALIVING
 -- GOTO --
 
 GLOBAL #::GLOB
+
 HEADER #::HEAD
+HEADER METANAV #::HEAD.META
+HEADER MAINNAV #::HEAD.MAIN
+
 FOOTER #::FOOT
+
 RESPONSIVE #::RESP
 
 -- ./GOTO --
@@ -24,6 +29,7 @@ body {
     font-family: "futura-pt","futura" , Futura, 'Trebuchet MS', 'Century Gothic', CenturyGothic, AppleGothic, 'Helvetica', 'Helvetica Neue', Arial, sans-serif;
     font-style: normal;
     font-weight: 300;
+    color: #000;
 }
 
 .back-to-top {
@@ -39,6 +45,20 @@ body {
 
 /* HEADER #::HEAD */
 
+
+.wrapper-main .navbar {
+    border: none;
+    background: #fff;
+}
+
+
+.navbar-brand .img-fluid {
+    width: 100%;
+}
+
+
+/* HEADER METANAV #::HEAD.META */
+
 .top-bar {
     background: #fff;
 }
@@ -47,23 +67,36 @@ body {
     background: transparent;
 }
 
-.wrapper-main .navbar {
-    border: none;
-    background: #fff;
+
+.top-bar .controls-list .control-basket .toggle-basket-preview,
+.top-bar .controls-list > li a {
+    color: #454545;
 }
 
-.look_metaNav {
-
+.top-bar .controls-list > li a:hover,
+.top-bar .controls-list > li a[aria-expanded=true] {
+    background: transparent;
+    color: #f55e8d;
 }
+
+/* HEADER MAINNAV #::HEAD.MAIN */
 
 #mainNavbarCollapsable ul.mainmenu li a {
     color: #313131;
 }
 
-.navbar-brand .img-fluid {
-    width: 100%;
+#mainNavbarCollapsable ul.mainmenu li a:hover {
+    color: #f55e8d;
 }
 
+#mainNavbarCollapsable ul.mainmenu > li:hover {
+    background-color: transparent;
+}
+
+#mainNavbarCollapsable ul.mainmenu > li > ul {
+   width: 100%;
+    background: #fff;
+}
 
 /* FOOTER #::FOOT */
 
