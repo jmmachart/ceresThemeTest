@@ -10,6 +10,8 @@ HEADER #::HEAD
 HEADER METANAV #::HEAD.META
 HEADER MAINNAV #::HEAD.MAIN
 
+HEADER MOBILENAV #::HEAD.NMOB
+
 FOOTER #::FOOT
 
 RESPONSIVE #::RESP
@@ -74,6 +76,7 @@ body {
 }
 
 .top-bar .controls-list > li a:hover,
+.top-bar .controls-list .control-basket .toggle-basket-preview:hover,
 .top-bar .controls-list > li a[aria-expanded=true] {
     background: transparent;
     color: #f55e8d;
@@ -85,18 +88,29 @@ body {
     color: #313131;
 }
 
+#mainNavbarCollapsable ul.mainmenu li ul li a:hover,
 #mainNavbarCollapsable ul.mainmenu li a:hover {
     color: #f55e8d;
 }
 
+#mainNavbarCollapsable ul.mainmenu ul li:hover,
 #mainNavbarCollapsable ul.mainmenu > li:hover {
     background-color: transparent;
 }
 
 #mainNavbarCollapsable ul.mainmenu > li > ul {
-   width: 100%;
+    width: 100%;
     background: #fff;
 }
+
+
+/* HEADER MOBILENAV #::HEAD.NMOB */
+
+.mobile-navigation {
+    background: #fff;
+}
+
+.mobile-navigation ul.mainmenu li a
 
 /* FOOTER #::FOOT */
 
