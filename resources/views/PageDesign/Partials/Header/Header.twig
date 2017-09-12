@@ -23,6 +23,7 @@
                     <user-login-handler template="#vue-user-login-handler"
                                         :user-data="{{ services.customer.getContact() | json_encode() }}"></user-login-handler>
                 </li>
+                <!--
                 <li class="list-inline-item dropdown control-languages">
                     <a class="" data-toggle="collapse" href="#countrySettings" aria-expanded="false"
                        aria-controls="countrySettings"
@@ -30,6 +31,7 @@
                         <i class="flag-icon flag-icon-{{ lang }}"></i>
                     </a>
                 </li>
+                -->
                 <li class="list-inline-item control-search">
                     <a class="" data-toggle="collapse" href="#searchBox"
                        aria-expanded="{% if services.template.isSearch() %}true{% else %}false{% endif %}"
