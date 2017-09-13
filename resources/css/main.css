@@ -1,3 +1,5 @@
+<style type="text/css">
+
 /*
 
 MAIN STYLES CERESZALIVING
@@ -11,8 +13,11 @@ GLOBAL #::GLOB
 HEADER #::HEAD
 HEADER METANAV #::HEAD.META
 HEADER MAINNAV #::HEAD.MAIN
+HEADER SEARCH #::HEAD.SRCH
 
 HEADER MOBILENAV #::HEAD.NMOB
+
+BODY #::BODY
 
 FOOTER #::FOOT
 
@@ -63,12 +68,18 @@ a:focus {
 .wrapper-main .navbar {
     border: none;
     background: #fff;
+    margin: 60px 0;
 }
 
+.look_brandWrapper {
+    float: left;
+}
 
-.navbar-brand .img-fluid {
+.look_logo .img-fluid {
     width: 100%;
 }
+
+
 
 
 /* HEADER METANAV #::HEAD.META */
@@ -77,6 +88,20 @@ a:focus {
     background: #fff;
     color: #454545;
     font-size: 12px;
+}
+
+.top-bar .look_contactInfo {
+    display: block;
+    float: left;
+    margin: 0;
+}
+
+.top-bar .look_metaWrapper {
+    margin-top: 20px;
+}
+
+.top-bar .look_metaNav {
+    float: right;
 }
 
 .top-bar .controls-list .control-basket .toggle-basket-preview {
@@ -119,6 +144,23 @@ a:focus {
     background: #fff;
 }
 
+/* HEADER SEARCH #::HEAD.SRCH */
+
+.look_headerSearch {
+    float: right;
+}
+
+.look_headerSearch .search-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #a2a2a2;
+    color: #a2a2a2;
+}
+
+.look_headerSearch .search-submit {
+    background: transparent;
+    border: none;
+}
 
 /* HEADER MOBILENAV #::HEAD.NMOB */
 
@@ -127,6 +169,13 @@ a:focus {
 }
 
 .mobile-navigation ul.mainmenu li a
+
+
+/* BODY #::BODY */
+
+.wrapper-main #page-body {
+    margin-top: 248px;
+}
 
 /* FOOTER #::FOOT */
 
@@ -139,3 +188,5 @@ a:focus {
 @media screen and (max-width: 768px) {
 
 }
+
+</style>
