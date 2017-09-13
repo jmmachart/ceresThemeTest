@@ -166,7 +166,9 @@ a:focus {
     background: #fff;
 }
 
-.mobile-navigation ul.mainmenu li a
+.mobile-navigation ul.mainmenu li a {
+    color: #454545;
+}
 
 
 /* BODY #::BODY */
