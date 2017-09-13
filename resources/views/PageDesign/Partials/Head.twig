@@ -19,9 +19,11 @@
 {% set itemName = config('Ceres.item.name') %}
 
 {# <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title> #}
-
-<link rel="stylesheet" href="{{ plugin_path('Ceres') }}/css/ceres.css">
-
+{% if performanceLevel == "development" %}
+    {% include "CeresZaliving::PageDesign.Partials.Header.InlineStyles" %}
+{%  else %}
+    <link rel="stylesheet" href="{{ plugin_path('Ceres') }}/css/ceres.css">
+{% endif %}
 <!-- Extend the existing style with a template -->
 {{ LayoutContainer.show("Ceres::Template.Style") }}
 
