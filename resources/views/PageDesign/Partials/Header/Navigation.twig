@@ -21,7 +21,9 @@
             </div>
 
             <div id="mainNavbarCollapsable">
-                    {{ includeCached('CeresZaliving::PageDesign.Partials.Header.NavigationList.twig') }}
+                {{ include('CeresZaliving::PageDesign.Partials.Header.NavigationList.twig') }}
+                <hr />
+                {{ includeCached('CeresZaliving::PageDesign.Partials.Header.NavigationList.twig') }}
             </div>
 
             <div id="searchBoxHeader" class="look_headerSearch">
