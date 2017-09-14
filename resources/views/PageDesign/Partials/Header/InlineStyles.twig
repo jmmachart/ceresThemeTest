@@ -73,10 +73,19 @@ color: #f55e8d;
 
 .look_brandWrapper {
     float: left;
+    width: 25%;
+}
+
+.look_logo {
+    display: block; 
 }
 
 .look_logo .img-fluid {
     width: 100%;
+}
+
+.navbar > .container-max {
+    position: relative;
 }
 
 
@@ -124,6 +133,27 @@ color: #f55e8d;
 
 /* HEADER MAINNAV #::HEAD.MAIN */
 
+#mainNavbarCollapsable {
+    float: left;
+    width: 50%;
+    position: static;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+
+#mainNavbarCollapsable ul.mainmenu {
+    position: static;
+    float: left;
+    width: 100%;
+}
+
+#mainNavbarCollapsable ul.mainmenu>li {
+    position: static;
+}
+
 #mainNavbarCollapsable ul.mainmenu li a {
 color: #313131;
 font-size: 18px;
@@ -135,6 +165,7 @@ color: #f55e8d;
 }
 
 #mainNavbarCollapsable ul.mainmenu ul li:hover,
+#mainNavbarCollapsable ul.mainmenu>li>ul>li:hover,
 #mainNavbarCollapsable ul.mainmenu > li:hover {
 background-color: transparent;
 }
@@ -142,12 +173,18 @@ background-color: transparent;
 #mainNavbarCollapsable ul.mainmenu > li > ul {
     width: 100%;
     background: #fff;
+    left: 0;
+    top: 100%;
+    border-top: 1px solid #eae7e4;
+    margin-top: 1px;
 }
 
 /* HEADER SEARCH #::HEAD.SRCH */
 
 .look_headerSearch {
-    float: right;
+    float: left;
+    width: 25%;
+    text-align: right;
 }
 
 .look_headerSearch .search-input {

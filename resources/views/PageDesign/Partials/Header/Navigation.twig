@@ -21,12 +21,7 @@
             </div>
 
             <div id="mainNavbarCollapsable">
-                <ul class="breadcrumb">
-                    <li class="btnClose"></li>
-                </ul>
-                {% if showHeaderNavBar == "top" or showHeaderNavBar == "both" or not services.template.isCategory() %}
                     {{ includeCached('CeresZaliving::PageDesign.Partials.Header.NavigationList.twig') }}
-                {% endif %}
             </div>
 
             <div id="searchBoxHeader" class="look_headerSearch">
