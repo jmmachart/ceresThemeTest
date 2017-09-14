@@ -4,7 +4,9 @@
 {% set categories = services.category.getNavigationTree("item", lang, 6) %}
 
 <resource name="navigationTree" :data="{{ categories | json_encode() }}"></resource>
-
+<div style="display: none">
+    {{ categories | json_encode() }}
+</div>
 <ul class="mainmenu">
     {{ Tree.get_mainnav_bar(categories, "") }}
 </ul>
