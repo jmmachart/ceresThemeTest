@@ -2,11 +2,10 @@
 
 {% set lang = services.sessionStorage.getLang() %}
 {% set categories = services.category.getNavigationTree("item", lang, 6) %}
-{% set categoriesList = services.category.getNavigationList("item", lang, 6) %}
 
 <resource name="navigationTree" :data="{{ categories | json_encode() }}"></resource>
 <div style="display: none">
-    {{ categoriesList | json_encode() }}
+    {{ services.category.getNavigationList("item", lang, 6) | json_encode() }}
     <br>
     <br>
     <br>
