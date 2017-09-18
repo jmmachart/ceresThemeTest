@@ -1,8 +1,9 @@
-{% macro get_mainNav(categories, maxEntries, maxLevel) %}
+{% macro get_mainNav(categories,urlScope, maxEntries, maxLevel) %}
 
     {% import _self as nav %}
 
-    {% set counter = 0 %}
+    {% set counter = 1 %}
+    {% set urlNow = currentScopeUrl %}
 
     {% for category in categories %}
 
@@ -10,38 +11,21 @@
 
             {% if category.details | length > 0 %}
 
-                {% set currentScopeUrl = "/" ~ category.details[0].nameUrl %}
+                {% set urlNow = currentScopeUrl ~ "/" ~ category.details[0].nameUrl %}
 
                 {% if category.children and category.children.level <= maxLevel %}
 
-                    <li class="look_hasSubNav look_navLevel-{{ category.level }}">
-                        <a href="{{ currentScopeUrl }}" >{{ category.details[0].name }}</a>
-
-                        <ul>
-
-                            {{ nav.get_mainNav(category.children, 10, maxLevel) }}
-
-                            {#
-
-
-                            {% for child in category.children %}
-                                {% if child.details | length > 0 %}
-                                    <li>
-                                        <a href="{{ currentScopeUrl }}/{{ child.details[0].nameUrl }}">{{ child.details[0].name }}</a>
-                                    </li>
-                                {% endif %}
-                            {% endfor %}
-
-                            #}
-
-
+                    <li class="look_hasSubNav look_navLevel-{{ category.level }}" data-catId="{{ category.id }}">
+                        <a href="{{ urlNow }}" >{{ category.details[0].name }}</a>
+                        <ul class="look_subNav">
+                            {{ nav.get_mainNav(category.children,urlNow, 10, maxLevel) }}
                         </ul>
                     </li>
 
                 {% else %}
 
-                    <li class="look_navLevel-{{ category.details[0].level }}">
-                        <a href="{{ currentScopeUrl }}">{{ category.details[0].name }}</a>
+                    <li class="look_navLevel-{{ category.level }}" data-catId="{{ category.id }}">
+                        <a href="{{ urlNow }}">{{ category.details[0].name }}</a>
                     </li>
 
                 {% endif %}

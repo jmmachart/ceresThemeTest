@@ -8,5 +8,5 @@
     {{ categories | json_encode() }}
 </div>
 <ul class="mainmenu get_mainnav">
-    {{ Tree.get_mainnav(categories, 3, 3) }}
+    {{ Tree.get_mainnav(categories,"", 3, 3) }}
 </ul>
