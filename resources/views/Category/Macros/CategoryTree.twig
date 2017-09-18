@@ -10,17 +10,17 @@
 
             {% if category.children %}
 
-                <li class="ddown" data-catjson="{{ category | json_encode }}">
-                    <a href="{{ currentScopeUrl }}" {# v-render-category='{{ category }}' #}>{{ category.details[0].name }}</a>
+                <li class="look_hasSubNav">
+                    <a href="{{ currentScopeUrl }}" >{{ category.details[0].name }}</a>
 
-                    <ul data-level="1" id="navDropdown{{ counter }}" class="collapse">
+                    <ul>
 
                         {% set counter = counter + 1 %}
 
                         {% for child in category.children %}
                             {% if child.details | length > 0 %}
                                 <li data-subcatjson="{{ category | json_encode }}">
-                                    <a href="{{ currentScopeUrl }}/{{ child.details[0].nameUrl }}" {# v-render-category='{{ child }}' #}>{{ child.details[0].name }}</a>
+                                    <a href="{{ currentScopeUrl }}/{{ child.details[0].nameUrl }}">{{ child.details[0].name }}</a>
                                 </li>
                             {% endif %}
                         {% endfor %}
@@ -31,7 +31,7 @@
             {% else %}
 
                 <li>
-                    <a href="{{ currentScopeUrl }}" {# v-render-category="{{ category }}" #}>{{ category.details[0].name }}</a>
+                    <a href="{{ currentScopeUrl }}">{{ category.details[0].name }}</a>
                 </li>
 
             {% endif %}
