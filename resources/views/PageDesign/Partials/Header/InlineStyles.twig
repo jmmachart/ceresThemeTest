@@ -156,10 +156,19 @@ ul.mainmenu>li {
     text-align: left;
 }
 
-.look_mainNavbar  ul.mainmenu li a {
+.look_mainNavbar  ul.mainmenu  li  a {
     color: #313131;
     font-size: 18px;
+}
+
+.look_mainNavbar  ul.mainmenu > li > a {
     padding: 1rem 0;
+    float: left;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
 }
 
 .look_mainNavbar  ul.mainmenu li ul li a:hover,
@@ -170,11 +179,14 @@ ul.mainmenu>li {
 
 ul.mainmenu > li > ul {
     display: none;
-    width: 100%;
     left: 0;
     top: 100%;
     border-top: 1px solid #eae7e4;
     position: absolute;
+    background: #fff;
+    padding: 4%;
+    box-sizing: initial;
+    width: 92%;
 }
 
 ul.mainmenu  li ul {
@@ -185,6 +197,10 @@ ul.mainmenu  li ul {
 
 ul.mainmenu .look_hasSubNav:hover > ul {
     display: block;    
+}
+
+ul.mainmenu li ul li {
+    margin: 14px 0;
 }
 
 
