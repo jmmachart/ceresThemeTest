@@ -5,10 +5,6 @@
 
 <resource name="navigationTree" :data="{{ categories | json_encode() }}"></resource>
 <div style="display: none">
-    {{ services.category.getNavigationList("item", lang, 6) | json_encode() }}
-    <br>
-    <br>
-    <br>
     {{ categories | json_encode() }}
 </div>
 <ul class="mainmenu get_mainnav_bar">
