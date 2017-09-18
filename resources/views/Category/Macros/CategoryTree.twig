@@ -14,7 +14,7 @@
 
                 {% if category.children and category.children.level <= maxLevel %}
 
-                    <li class="look_hasSubNav look_navLevel-{{ category.details[0].level }}">
+                    <li class="look_hasSubNav look_navLevel-{{ category.level }}">
                         <a href="{{ currentScopeUrl }}" >{{ category.details[0].name }}</a>
 
                         <ul>

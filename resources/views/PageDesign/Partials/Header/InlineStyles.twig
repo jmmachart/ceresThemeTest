@@ -178,7 +178,6 @@ ul.mainmenu>li {
 
 
 .look_mainNavbar ul.mainmenu > li > ul {
-    display: none;
     left: 0;
     top: 100%;
     border-top: 1px solid #eae7e4;
@@ -189,18 +188,31 @@ ul.mainmenu>li {
     width: 92%;
 }
 
-ul.mainmenu  li ul {
+ul.mainmenu li ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: none;
 }
 
-ul.mainmenu .look_hasSubNav:hover > ul {
+.look_mainNavbar ul.mainmenu .look_hasSubNav:hover > ul {
     display: block;    
 }
 
-ul.mainmenu li ul li {
+ul.mainmenu  li  ul  li {
     margin: 14px 0;
+    background: #fff;
+}
+
+ul.mainmenu > li > ul > li {
+    width: 367px;
+}
+
+ul.mainmenu > li > ul > li > ul {
+    width: 367px;
+    position: absolute;
+    left: 417px;
+    top: 50px;
 }
 
 
