@@ -1,38 +1,51 @@
-{% macro get_mainnav_bar(categories, currentScopeUrl) %}
+{% macro get_mainNav(categories, maxEntries, maxLevel) %}
+
+    {% import _self as nav %}
 
     {% set counter = 0 %}
 
     {% for category in categories %}
 
-        {% if category.details | length > 0 %}
+        {% if counter <= maxEntries %}
 
-            {% set currentScopeUrl = "/" ~ category.details[0].nameUrl %}
+            {% if category.details | length > 0 %}
 
-            {% if category.children %}
+                {% set currentScopeUrl = "/" ~ category.details[0].nameUrl %}
 
-                <li class="look_hasSubNav">
-                    <a href="{{ currentScopeUrl }}" >{{ category.details[0].name }}</a>
+                {% if category.children and category.children.level <= maxLevel %}
 
-                    <ul>
+                    <li class="look_hasSubNav look_navLevel-{{ category.details[0].level }}">
+                        <a href="{{ currentScopeUrl }}" >{{ category.details[0].name }}</a>
 
-                        {% set counter = counter + 1 %}
+                        <ul>
 
-                        {% for child in category.children %}
-                            {% if child.details | length > 0 %}
-                                <li data-subcatjson="{{ child | json_encode }}">
-                                    <a href="{{ currentScopeUrl }}/{{ child.details[0].nameUrl }}">{{ child.details[0].name }}</a>
-                                </li>
-                            {% endif %}
-                        {% endfor %}
+                            nav.get_mainNav(category.children, 10, maxLevel)
 
-                    </ul>
-                </li>
+                            {#
 
-            {% else %}
+                            {% for child in category.children %}
+                                {% if child.details | length > 0 %}
+                                    <li>
+                                        <a href="{{ currentScopeUrl }}/{{ child.details[0].nameUrl }}">{{ child.details[0].name }}</a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
 
-                <li>
-                    <a href="{{ currentScopeUrl }}">{{ category.details[0].name }}</a>
-                </li>
+                            #}
+
+                        </ul>
+                    </li>
+
+                {% else %}
+
+                    <li class="look_navLevel-{{ category.details[0].level }}">
+                        <a href="{{ currentScopeUrl }}">{{ category.details[0].name }}</a>
+                    </li>
+
+                {% endif %}
+
+
+                {% set counter = counter + 1 %}
 
             {% endif %}
         {% endif %}
