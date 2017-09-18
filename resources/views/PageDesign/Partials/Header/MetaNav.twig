@@ -16,7 +16,7 @@
                 {% if config("Ceres.header.basket_values") != "sum" %}
                     <span class="badge-right" v-resource-bind:basket="itemQuantity">0</span>
                 {% endif %}
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <i class="icon-handbag" aria-hidden="true"></i>
                 {% if config("Ceres.header.basket_values") != "quantity" %}
                     <span class="badge" v-resource-bind:basket="itemSum" :filters="['currency']">0,00 €</span>
                 {% endif %}
