@@ -9,7 +9,6 @@
 <!DOCTYPE html>
 
 {% set lang = services.sessionStorage.getLang() %}
-{% set fixNavBarPos = config("Ceres.header.fixed_navbar") %}
 
 {% set basketAddInformation = config("Ceres.basket.add_item_to_basket_confirm") %}
 
@@ -51,7 +50,7 @@
     <!-- filters -->
 </div>
 
-<div class="wrapper wrapper-main {% if fixNavBarPos == 'true' %}isSticky{% endif %}">
+<div class="wrapper wrapper-main isSticky">
 
     {% include getPartial('header') %}
 
@@ -62,8 +61,7 @@
     </div>
 
     {% include getPartial('footer') %}
-
-    {% block PartialFooter %}
+        {% block PartialFooter %}
     {% endblock %}
 
 </div>

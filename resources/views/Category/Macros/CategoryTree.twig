@@ -19,7 +19,7 @@
 
                         {% for child in category.children %}
                             {% if child.details | length > 0 %}
-                                <li>
+                                <li data-subcatjson="{{ category | json_encode }}">
                                     <a href="{{ currentScopeUrl }}/{{ child.details[0].nameUrl }}" v-render-category="{{ child }}">{{ child.details[0].name }}</a>
                                 </li>
                             {% endif %}
